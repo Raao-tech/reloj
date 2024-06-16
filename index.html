@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj</title>
+    <style>
+        :root{
+            /*document's colors */
+            --background-color-page :#f0f0f0;
+            --background-color-header: #007abc;
+            --background-color-nav: #555;
+            --background-color-reloj: white;
+            --color-leters:#f0f0f0;
+            --color-leters-subcontainer: black;
+            
+            
+
+            /*document's sizes*/
+            --size-lettersTitle:25px;
+
+            
+
+            
+        }
+        *{
+            padding: 0%;
+            margin: 0%;
+           
+        }
+        html{
+            height: 100vh;
+            width: 100%;
+            background-color: var(--background-color-page);
+            color: var(--color-leters);
+            font-size: var(--size-lettersTitle);
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+
+        }
+        .container-header{
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            height: 30px;
+            width: auto;
+            padding: 25px;
+
+            
+            
+            background-color: var(--background-color-header);
+
+            
+            
+
+        }
+        .container-subcontainer{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 80px ;
+
+            height: auto;
+            width: auto;
+        }
+        .container-footer{
+
+            display: flex;
+            justify-content: center;
+
+            height: 25vh;
+            width: auto;
+
+            color: var(--color-leters);
+            
+           
+            
+        }
+        .subcontainer-nav{
+            display: grid;
+            justify-items: center;
+            justify-content: center;
+
+          
+            
+            height: 100vh;
+            width: 100px;
+            background-color: var(--background-color-nav);
+
+            margin-top: 80px;
+            padding-bottom: 80px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            z-index: 1031;
+            
+        }
+        .nav-opcion{
+
+            height: 360px;
+            width: auto;
+
+            position: fixed;
+
+            font-size: small;
+
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            align-content: space-evenly;
+
+        }
+        .nav-opcion li{
+            width: 100px;
+        }
+        .nav-opcion img{
+            width: 100px;
+            font-size: x-small;
+        }
+        .subcontainer-content{
+            height: 75vh;
+            width: 100vh;
+
+            display: grid;
+            align-content:center ;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            color: var(--color-leters-subcontainer);
+        }
+        .content-reloj {
+            width: 100vh;
+            height: 55vh;
+            position: relative;
+            margin-bottom: 22px;
+            border: 1px solid transparent;
+            border-radius: 25px;
+            
+            box-shadow: 0 25px 25px rgba(0, 0, 0, .05);
+            background-color: var(--background-color-reloj);
+
+            display: grid;
+            justify-content: center;
+            align-items: center;
+
+            font-size: xxx-large;
+            
+            
+        }
+        .content-reloj section {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+
+
+        }
+
+        .content-worldReloj{
+            display: grid;
+            background-color: var(--background-color-page);
+            height: auto;
+            width:  95vh;
+            padding: 2%;
+            
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="container-header">
+
+            <div class="header-title">
+                <span> <b>Reloj</b></span>
+            </div>
+            <div class="header-opcion">
+                <a href="#">Fechas Festivas</a> 
+                <a href="#">Herramientas</a> 
+                <a href="#">Configuración</a>
+                <a href="#">Modo Nocturno</a>
+
+            </div>
+            
+        </nav>
+       
+        <div class="container-subcontainer">
+            
+            <div class="subcontainer-nav" >
+               <ul class="nav-opcion">
+
+                     <li class="opcion-alarma">
+                        <a href="#">
+                            <img src="#" alt="img_alarma">
+                            <span>Alarma</span>
+                        </a>
+                     </li>
+
+                     <li class="opcion-temporizador">
+                        <a href="#">
+                            <img src="#" alt="img_temporizador">
+                            <span>Temporizador</span>
+                        <a>
+
+                     </li>
+
+                     <li class="opcion-cronometro">
+                        <a href="#">
+                            <img src="#" alt="img_cronometro">
+                            <span>Cronometro</span>
+                        </a>
+                     </li>
+
+                     <li class="opcion-reloj">
+                        <a href="#">
+                            <img src="#" alt="img_reloj">
+                            
+                            <span>Reloj</span>
+                        </a>
+                       
+                     </li>  
+                    
+               </ul>
+                    
+            </div>
+
+            <section class="subcontainer-content">
+    
+                    <article class="content-reloj">
+    
+                        <section class="reloj-body">
+    
+                            <h1 class="reloj-body-time"> 00:00:00 </h1>
+                            <h1 class="reloj-body-date"> 25 de junio del 2024</h1>
+                        </section>
+                        
+                    </article>
+    
+                    <article class="content-worldReloj">
+    
+                        
+    
+                        <input type="text" class="worldReloj-search" id="worldReloj-nav-search" placeholder="Search Country...">
+    
+                        <div class="worldReloj-country">
+                            <p>Caracas:</p>
+    
+                            <h1 class="worldReloj-country-time-HMS"> 00:00:00 </h1>
+                        </div>
+                            
+                        <button class="worldReloj-country-addCountry">Add Country  </button>
+                
+                    </article>
+    
+            </section>
+
+    
+        </div>
+           
+            <footer class="container-footer">
+            <p>Tu Reloj digital Hecho por RaaoTech</p>
+        </footer>
+    </div>
+
+    
+</body>
+</html>
